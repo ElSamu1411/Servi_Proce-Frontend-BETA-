@@ -7,7 +7,7 @@ const defaultLocale = 'es';
 // Rutas estáticas o de Next.js que no deben ser interceptadas
 const PUBLIC_FILE = /\.(.*)$/;
 
-export function middleware(request) {
+export default function proxy(request) {
   const { pathname } = request.nextUrl;
 
   // Si es una ruta interna de Next.js, un archivo público o ruta de API, no hacemos nada
